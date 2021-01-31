@@ -30,8 +30,8 @@ add_action('wp_head', 'injectHeader');
 add_action('wp_footer', 'injectFooter');
 
 function adminInit() {
-	register_setting('basic-headers-and-footers', 'header');
-	register_setting('basic-headers-and-footers', 'footer');
+	register_setting('basic-headers-and-footers', 'bhaf_header');
+	register_setting('basic-headers-and-footers', 'bhaf_footer');
 }	
 
 function adminMenu() {
