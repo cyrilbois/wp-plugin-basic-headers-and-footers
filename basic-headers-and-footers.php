@@ -17,9 +17,6 @@ if ( ! defined( 'WPINC' ) ) {
 	die;
 }
 
-// Register options
-add_action('admin_init', 'adminInit');
-
 // Add submenu
 add_action('admin_menu', 'adminMenu');
 
@@ -28,11 +25,6 @@ add_action('wp_head', 'injectHeader');
 
 // Add code to footer
 add_action('wp_footer', 'injectFooter');
-
-function adminInit() {
-	register_setting('basic-headers-and-footers', 'bhaf_header');
-	register_setting('basic-headers-and-footers', 'bhaf_footer');
-}	
 
 function adminMenu() {
 	add_submenu_page( 'options-general.php', 
